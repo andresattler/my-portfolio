@@ -1,0 +1,271 @@
+h1 {
+  margin: 0;
+}
+nav {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 6;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+nav #share {
+  display: flex;
+}
+nav a {
+  color: #989898;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    width: 50px;
+    height: 100vh;
+    flex-flow: column;
+  }
+  nav #share {
+    flex-flow: column;
+  }
+  nav a:hover {
+    color: #333;
+    background-color: #989898;
+  }
+}
+#menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  position: fixed;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+}
+#menu a {
+  text-decoration: none;
+  font-size: 6vw;
+  color: #7a683c;
+  padding-left: 50px;
+}
+#menu a:hover {
+  font-size: 7vw;
+  color: #a38e4a;
+}
+.centered {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+svg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+}
+.scroll {
+  margin-top: 80px;
+}
+@media only screen and (min-height: 500px) {
+  .scroll {
+    color: #333;
+    font-size: 40px;
+    display: inline-block;
+    position: absolute;
+    bottom: 7px;
+    text-decoration: none;
+    background-color: #ad974f;
+    color: #444;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+}
+#view {
+  height: 100vh;
+  overflow: hidden;
+}
+#wrapper {
+  position: relative;
+}
+#wrapper a {
+  position: relative;
+}
+#wrapper a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#wrapper a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#home #profile {
+  width: 200px;
+  height: 200px;
+  background-image: url("//s3-us-west-2.amazonaws.com/s.cdpn.io/523737/profile/profile-512_1.jpg");
+  background-size: 200px;
+  border-radius: 50%;
+  border: 4px solid #333;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#home h1 {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 2px 1px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ad974f;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#about {
+  background-color: #444;
+  color: #ad974f;
+  font-size: 20px;
+}
+#about p {
+  max-width: 300px;
+}
+@media only screen and (min-width: 480px) {
+  #about p {
+    max-width: 420px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #about p {
+    max-width: 900px;
+  }
+}
+#about a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ad974f;
+  color: #444;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#about a:hover {
+  background-color: #c7b169;
+}
+#projects {
+  background-color: #ad974f;
+  color: #333;
+}
+#projects h1 {
+  padding-top: 50px;
+}
+#projects #project-gallery {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  #projects #project-gallery {
+    flex-flow: row;
+  }
+}
+#projects #project-gallery .project {
+  height: 40%;
+  width: 340px;
+  background-color: #333;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: #ad974f;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  #projects #project-gallery .project {
+    height: 80%;
+    width: 50%;
+  }
+}
+#projects #tribute {
+  margin: 2.5%;
+  height: 50%;
+  width: 95%;
+  background-image: url("https://farm8.staticflickr.com/7794/17317951241_848af639af_k.jpg");
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#projects #tribute #gl {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/54/George_Lucas%2C_Pasadena.jpg");
+  background-size: auto 100%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (min-width: 768px) {
+  #projects #tribute {
+    height: 70%;
+  }
+  #projects #gl {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+@media only screen and (max-height: 360px) {
+  #projects #tribute {
+    height: 80px;
+  }
+  #projects #gl {
+    width: 75px !important;
+    height: 75px !important;
+  }
+}
+#projects #more {
+  font-size: 40px;
+  margin-top: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+@media only screen and (max-width: 768px) {
+  #projects #more {
+    margin-top: 40%;
+  }
+}
+@media only screen and (max-height: 360px) {
+  #projects #more {
+    margin-top: 5%;
+  }
+}
+#projects .project:hover #tribute {
+  transition: border 0.3s;
+  border: 3px solid #ad974f;
+}
+#contact {
+  font-size: 22px;
+}
+@media only screen and (min-width: 530px) {
+  #contact {
+    font-size: 36px;
+  }
+}
+#contact a {
+  text-decoration: none;
+  color: #333;
+}
