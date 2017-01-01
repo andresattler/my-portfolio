@@ -1,5 +1,5 @@
-var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('profile'), antislias: true});
-renderer.setClearColor(0x18435F);
+var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('profile'), alpha:true, antislias: true});
+renderer.setClearColor(0x000000, 0);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -34,17 +34,16 @@ window.addEventListener('resize', function(){
 
 if (window.DeviceOrientationEvent)
 {
-    window.addEventListener("deviceorientation", function (){
-      var y = 2* Math.PI/360*event.gamma
-      if(y<0.785 && y>-0.785){
-        mesh.rotation.y = -y;
-      }
-    }, true);
-}else{
-  document.addEventListener('mousemove', function(e){
-    var x= window.innerWidth/2 - e.screenX;
-    mesh.rotation.y = -0.7853982 * x/window.innerWidth;
-    var y = window.innerHeight/2 - e.screenY;
-    mesh.rotation.x = -0.7853982 * y/window.innerHeight
-  });
+  window.addEventListener("deviceorientation", function (){
+    var y = 2* Math.PI/360*event.gamma
+    if(y<0.785 && y>-0.785){
+      mesh.rotation.y = -y;
+    }
+  }, true);
 }
+document.addEventListener('mousemove', function(e){
+  var x= window.innerWidth/2 - e.screenX;
+  mesh.rotation.y = -0.7853982 * x/window.innerWidth;
+  var y = window.innerHeight/2 - e.screenY;
+  mesh.rotation.x = -0.7853982 * y/window.innerHeight
+});
