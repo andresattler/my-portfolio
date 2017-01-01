@@ -30,7 +30,6 @@ nav {
   background-color: #989898;
   width: 35px;
   height: 5px;
-  border-radius: 5px;
   left: 5px;
 }
 #nav-icon span:nth-child(1) {
@@ -111,16 +110,41 @@ nav {
   display: flex;
   flex-flow: wrap;
   background-color: #444;
+  cursor: pointer;
 }
 .project {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 500px;
-  border: 1px solid #000;
+  margin-top: -5px;
+}
+.project:hover .title {
+  visibility: visible;
+}
+.project img {
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 @media screen and (min-width: 800px) {
   .project {
     width: 50%;
+  }
+}
+.title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 5px;
+  font-size: 26px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  color: #ad974f;
+}
+@media screen and (min-width: 800px) {
+  .title {
+    visibility: hidden;
   }
 }
 #more {

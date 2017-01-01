@@ -5,7 +5,7 @@ import babel from 'gulp-babel';
 import webserver from 'gulp-webserver';
 import del from 'del';
 
-gulp.task('clean', () => del.sync(['lib/*', '!lib/profile.jpg', '!lib/three.min.js', '!lib/background.png']));
+gulp.task('clean', () => del.sync(['lib/style.css', 'lib/script.js', 'lib/index.html']));
 
 gulp.task('buildHtml', () =>
   gulp.src('src/index.pug')
