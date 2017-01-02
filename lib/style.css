@@ -96,12 +96,13 @@ nav a:hover {
 }
 section {
   width: 100vw;
+  position: relative;
+  z-index: 1;
 }
 #intro {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   height: 100vh;
   display: flex;
   flex-flow: column;
@@ -122,6 +123,8 @@ section {
   margin-bottom: 50px;
 }
 #placeholder {
+  position: relative;
+  z-index: -1;
   height: 100vh;
   margin-bottom: 5px;
 }

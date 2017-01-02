@@ -55,16 +55,17 @@ document.getElementById('nav-icon').addEventListener('click', function(){
   console.log('x')
   if(menu){
     document.getElementById('menu').style.visibility = 'hidden';
+    document.body.style.overflowY = 'auto';
     menu=false;
   }else{
     document.getElementById('menu').style.visibility = 'visible';
+    document.body.style.overflowY = 'hidden';
     menu=true;
   }
 });
 window.addEventListener('scroll', function(){
   var s = 1-window.pageYOffset/window.innerHeight;
   if(s>0.7){
-    console.log(s);
     document.getElementById('intro').style.transform = `scale(${s})`;
   }
 })
