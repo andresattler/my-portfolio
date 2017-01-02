@@ -1,5 +1,6 @@
 body
   overflow-x: hidden;
+  background-color: #333333
 body, h1
   margin: 0;
 .link
@@ -58,7 +59,7 @@ header
       top 25px
 nav
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top 0px
   left 0px
   z-index: 2
@@ -79,10 +80,11 @@ nav
 section
   width: 100vw
 #intro
-  position: relative;
+  position: fixed;
+  top 0
+  left 0
   z-index: -1
   height: 100vh;
-  margin-bottom: 5px
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -98,6 +100,9 @@ section
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
   a
     margin-bottom: 50px
+#placeholder
+  height 100vh
+  margin-bottom: 5px
 #profile
   position absolute
   top 0px

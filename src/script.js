@@ -60,5 +60,11 @@ document.getElementById('nav-icon').addEventListener('click', function(){
     document.getElementById('menu').style.visibility = 'visible';
     menu=true;
   }
-
 });
+window.addEventListener('scroll', function(){
+  var s = 1-window.pageYOffset/window.innerHeight;
+  if(s>0.7){
+    console.log(s);
+    document.getElementById('intro').style.transform = `scale(${s})`;
+  }
+})
