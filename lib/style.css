@@ -93,6 +93,16 @@ nav a {
 nav a:hover {
   font-size: 30px;
 }
+#social {
+  margin-top: 50px;
+}
+#social a:hover {
+  width: 55px;
+  height: 55px;
+}
+#social svg {
+  fill: #ad974f;
+}
 section {
   width: 100vw;
   position: relative;
@@ -205,23 +215,28 @@ footer {
   background-color: #333;
   text-align: center;
 }
-footer a {
+footer svg {
+  fill: #989898;
+}
+footer svg:hover {
+  fill: #333;
+  background-color: #989898;
+}
+footer a,
+#social a {
   display: inline-block;
   width: 50px;
   height: 50px;
   margin-left: 5px;
   text-align: center;
 }
-footer a svg {
+footer a svg,
+#social a svg {
   display: block;
   width: 100%;
   height: 100%;
-  fill: #989898;
 }
-footer a svg:hover {
-  fill: #333;
-  background-color: #989898;
-}
-footer a svg path {
+footer a svg path,
+#social a svg path {
   box-sizing: inherit;
 }
