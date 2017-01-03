@@ -36,7 +36,6 @@ header {
   top: 0px;
   left: 0px;
   width: 100vw;
-  height: 100vh;
   z-index: 3;
   height: 35px;
   text-align: right;
@@ -204,4 +203,25 @@ footer {
   height: 50px;
   width: 100vw;
   background-color: #333;
+  text-align: center;
+}
+footer a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  text-align: center;
+}
+footer a svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: #989898;
+}
+footer a svg:hover {
+  fill: #333;
+  background-color: #989898;
+}
+footer a svg path {
+  box-sizing: inherit;
 }
