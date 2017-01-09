@@ -39,6 +39,7 @@ header
   display block
   width 45px
   height 35px
+  cursor: pointer
   &:hover
     background-color: #989898
     span
@@ -50,12 +51,20 @@ header
     width 35px
     height: 5px
     left 5px
+    transition: all 0.5s
     &:nth-child(1)
       top: 5px
     &:nth-child(2)
       top 15px
     &:nth-child(3)
       top 25px
+#nav-icon.open
+  span:nth-child(1)
+    transform: rotate(45deg) translateY(10px) translateX(5px);
+  span:nth-child(2)
+    display none
+  span:nth-child(3)
+    transform rotate(-45deg) translateY(-10px) translateX(5px)
 nav
   visibility: hidden;
   position: fixed;
@@ -169,6 +178,8 @@ section
     margin-left 5px
     font-size: 21px
 footer
+  position: relative;
+  z-index: 2
   height 50px
   width 100vw
   background-color: #333333

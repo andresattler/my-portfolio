@@ -55,10 +55,12 @@ document.getElementById('nav-icon').addEventListener('click', function(){
   console.log('x')
   if(menu){
     document.getElementById('menu').style.visibility = 'hidden';
+    document.getElementById('nav-icon').classList.remove('open');
     document.body.style.overflowY = 'auto';
     menu=false;
   }else{
     document.getElementById('menu').style.visibility = 'visible';
+    document.getElementById('nav-icon').classList.add('open')
     document.body.style.overflowY = 'hidden';
     menu=true;
   }
