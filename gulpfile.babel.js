@@ -5,16 +5,16 @@ import babel from 'gulp-babel';
 import webserver from 'gulp-webserver';
 import del from 'del';
 
-gulp.task('clean', () => del.sync(['lib/style.css', 'lib/script.js', 'lib/index.html']));
+gulp.task('clean', () => del.sync(['lib/**/*.css', 'lib/script.js', 'lib/**/*.html']));
 
 gulp.task('buildHtml', () =>
-  gulp.src('src/index.pug')
+  gulp.src('src/**/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('lib'))
 );
 
 gulp.task('buildCss', () =>
-  gulp.src('src/style.styl')
+  gulp.src('src/**/*.styl')
     .pipe(stylus())
     .pipe(gulp.dest('lib'))
 );
@@ -35,7 +35,7 @@ gulp.task('webserver', () =>
 
 
 gulp.task('watch', () =>
-  gulp.watch('src/*', ['main'])
+  gulp.watch('src/**', ['main'])
 );
 
 gulp.task('default', ['main', 'watch', 'webserver']);
