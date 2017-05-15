@@ -50,21 +50,18 @@ function introAnimation(){
   });
 }
 introAnimation();
-var menu = false;
-document.getElementById('nav-icon').addEventListener('click', function(){
-  console.log('x')
-  if(menu){
-    document.getElementById('menu').style.visibility = 'hidden';
-    document.getElementById('nav-icon').classList.remove('open');
-    document.body.style.overflowY = 'auto';
-    menu=false;
-  }else{
-    document.getElementById('menu').style.visibility = 'visible';
-    document.getElementById('nav-icon').classList.add('open')
-    document.body.style.overflowY = 'hidden';
-    menu=true;
-  }
-});
+
+let navIcon = document.getElementById('nav-icon');
+let menu = document.getElementById('menu');
+let menuVisible = false;
+function toggleMenu(){
+  navIcon.classList.toggle('open');
+  menu.style.visibility = menuVisible ? 'hidden' : 'visible';
+  document.body.style.overflowY = menuVisible ? 'hidden' : 'auto';
+  menuVisible = !menuVisible;
+}
+document.getElementById('nav-icon').addEventListener('click', toggleMenu);
+document.getElementById('menu').addEventListener('click', toggleMenu);
 window.addEventListener('scroll', function(){
   var s = 1-window.pageYOffset/window.innerHeight;
   if(s>0.7){
