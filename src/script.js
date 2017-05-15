@@ -57,7 +57,7 @@ let menuVisible = false;
 function toggleMenu(){
   navIcon.classList.toggle('open');
   menu.style.visibility = menuVisible ? 'hidden' : 'visible';
-  document.body.style.overflowY = menuVisible ? 'hidden' : 'auto';
+  document.body.style.overflowY = menuVisible ? 'auto' : 'hidden';
   menuVisible = !menuVisible;
 }
 document.getElementById('nav-icon').addEventListener('click', toggleMenu);
